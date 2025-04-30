@@ -29,8 +29,8 @@ import pandas as pd
 import os
 from datetime import datetime
 
-
-dados = pd.read_excel("Exemplo.xlsx", engine="openpyxl")
+caminho_arquivo = r"C:\Users\ickbo\Desktop\C-digoGov\Exemplo.xlsx"
+dados = pd.read_excel(caminho_arquivo)
 data = dados.iloc[2, 14]
 data_formatada = pd.to_datetime(data).date()
 dataconvertida = data_formatada.strftime("%d/%m/%Y")
